@@ -2,7 +2,7 @@ package com.poo.exerciciosroni;
 
 import java.util.Scanner;
 
-public class Exercicio1 {
+public class Exercicio01 {
     public static void resolucao(){
         
 		//1) Leia dois valores pelo teclado e imprima a soma.

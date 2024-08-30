@@ -2,7 +2,7 @@ package com.poo.exerciciosroni;
 
 import java.util.Scanner;
 
-public class Exercicio2 {
+public class Exercicio02 {
     public static void resolucao(){
         //2)Construir um algoritmo que leia um número e exiba na tela o seu 
         //sucessor e antecessor.
