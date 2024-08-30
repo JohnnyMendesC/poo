@@ -1,0 +1,19 @@
+Project:	Maven
+Language:	Java
+SpringBoot:	3.3.3
+
+Project Metadata
+Group:		com.poo
+Artifact:	exerciciosroni
+Description:	projeto criado para aula de revisao
+
+Packaging:	jar
+Java:		java17
+
+add dependencies: springboot dev tools
+
+generate
+
+unzipa
+
+cola no local
