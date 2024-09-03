@@ -1,0 +1,16 @@
+
+
+alt seta pra cima ou baixo
+move a seleção pra cima ou baixo 
+
+alt shift seta pra baixo 
+copia a seleção pra baixo
+
+ctrl f
+pesquisa uma palavra especifica (e substitui)
+
+f2
+renomeia a variavel em todo o código ao mesmo tempo
+
+ctrl shift f 
+procura palavra no projeto todo
