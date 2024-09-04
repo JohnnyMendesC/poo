@@ -11,6 +11,7 @@ public class Cliente {
     Endereco endereco;
     String email;
     String telefone;
+    //escrever os gets e sets
 
     // Método
     void imprimeFicha(){
