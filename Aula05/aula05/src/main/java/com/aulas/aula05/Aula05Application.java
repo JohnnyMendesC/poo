@@ -19,6 +19,15 @@ public class Aula05Application {
 		cliente1.email = "juulia@mail.com";
 		cliente1.telefone = "24999998888";
 
+		Cliente cliente2 = new Cliente();
+		cliente2.nome = "Mend C";
+		cliente2.cpf = "32145678900";
+		cliente2.dataNascimento = "01/01/2001";
+		cliente2.login = "Mendm";
+		cliente2.senha = "mam";
+		cliente2.email = "mandme@mail.com";
+		cliente2.telefone = "24988998888";
+
 		// Instanciando um novo objeto end do tipo endereco
 		Endereco end = new Endereco();
 
@@ -33,21 +42,24 @@ public class Aula05Application {
 		cliente1.imprimeFicha();
 
 		//Instanciando uma conta
-		Conta conta1 = new Conta();
-		conta1.numero = "1234-0";
-		conta1.titular = cliente1;
+		//Conta conta1 = new Conta();//esse contrutor deixa de existir quando cria um Construtor dentro da Classe
+		//conta1.setNumero("1234-0");
+		//conta1.setTitular(cliente1);
 		//conta1.saldo = 100d; //terá que substituir, pois não pode mais acessa-la daqui ja que se tornou private
 		//agora somente é possível alterar pelo metodo .setSaldo() dentro da propria classe Conta
-		conta1.setSaldo(5000);
-
+		//conta1.setDataAbertura("02/09/2024");
+		//conta1.setSaldo(5000);
+		
+		Conta conta1 = new Conta(cliente1, "Corrente");
+		Conta conta2 = new Conta();
+		
 		//conta2
-
 		//conta2.saldo = 1000000000;
 
-		conta1.exibeSaldo();
-		System.out.println(conta1.saldo);
 
-
+		conta1.exibeDadosDaConta();
+		//conta2.exibeSaldo();
+		//System.out.println(conta1.getSaldo());
+		conta2.exibeDadosDaConta();
 	}
-
 }
