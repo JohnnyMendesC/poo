@@ -69,11 +69,22 @@ public class Aula06Application {
 		//System.out.println(conta1.contadorId);//não funciona pois o contadorId é da classe Conta
 		System.out.println(Conta.contadorId);*/
 
-		Cliente cliente1 = new Cliente();
-		Cliente cliente2 = new Cliente();
-		Cliente cliente3 = new Cliente();
-
-
+		Cliente cliente1 = new Cliente("Nome1", "123", "Jan96", "1@com", "2422");
+		cliente1.setNome("Nome1"); cliente1.setCpf("123"); cliente1.setDataNascimento("Jan96");
+		cliente1.setEmail("1@com"); cliente1.setTelefone("1141");
+		
+		Cliente cliente2 = new Cliente("Nome2", "456", "Dez96", "2@com", "2423");
+		cliente2.setNome("Nome2"); cliente2.setCpf("456"); cliente2.setDataNascimento("Dez96");
+		cliente2.setEmail("2@com"); cliente2.setTelefone("2242");		
+		
+		Cliente cliente3 = new Cliente("Nome3", "789", "Jul96", "3@com", "2424");
+		cliente3.setNome("Nome3"); cliente3.setCpf("789"); cliente3.setDataNascimento("Jul96");
+		cliente3.setEmail("3@com"); cliente3.setTelefone("3343");
+		
+		cliente1.imprimeFicha();
+		cliente2.imprimeFicha();
+		cliente3.imprimeFicha();
+/* 
 		Conta conta1 = new Conta(cliente1, "Corrente");
 		Conta conta2 = new Conta(cliente2, "Corrente");
 		Conta conta3 = new Conta(cliente3, "Corrente");
@@ -89,6 +100,12 @@ public class Aula06Application {
 		System.out.println(conta2.getNumero());
 		System.out.println(conta3.getNumero());
 
-		System.out.println(Conta.contadorNumero);
+		System.out.println(Conta.contadorNumero);*/
+
+		//1) Escrever as Classes do projeto
+		//2) Os atributos das classes privados e escrever os Gets e Sets
+		//3) Escrever os construtores
+		//4) As particularidades de cada Classe
+		
 	}
 }

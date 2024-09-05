@@ -1,14 +1,14 @@
 package com.aula06.aula06;
 
 public class Endereco {
-    int id;
-    String logradouro;
-    String numero;
-    String complemento;
-    String bairro;
-    String cidade;
-    String estado;
-    String cep;
+    //private int id;
+    private String logradouro;
+    private String numero;
+    private String complemento;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String cep;
 
     void imprimeEndereco(){
         System.out.println("---------");

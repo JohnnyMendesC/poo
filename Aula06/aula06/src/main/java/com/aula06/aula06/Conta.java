@@ -124,14 +124,14 @@ public class Conta {
 //Outros Métodos
 public void exibeSaldo(){
     System.out.println("Conta: "+this.numero);
-    System.out.println("Titular: "+this.titular.nome);
+    System.out.println("Titular: "+this.titular.getNome());
     System.out.println("Seu saldo é: R$"+this.saldo);    
     }
     public void exibeDadosDaConta(){
         System.out.println("---------");
         System.out.println("DADOS DA CONTA:");
         System.out.println("Conta: "+this.numero);
-        System.out.println("Titular: "+this.titular.nome);
+        System.out.println("Titular: "+this.titular.getNome());
         System.out.println("Seu saldo é: R$"+this.saldo);   
         System.out.println("Data de abertura: "+this.dataAbertura);
         System.out.println("Tipo Classificação: "+this.classificacao);
