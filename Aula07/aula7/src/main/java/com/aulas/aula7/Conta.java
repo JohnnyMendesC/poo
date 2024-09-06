@@ -1,58 +1,103 @@
 package com.aulas.aula7;
 
-public abstract class Conta extends Cliente {
-    public static int contadorId = 1; //esse atributo é static, então ele não é da conta1 ou conta2, ele é do objeto Conta
-    public static int contadorNumero = 1000;
+    public abstract class Conta {
+        public static int contadorId = 900; //esse atributo é static, então ele não é da conta1 ou conta2, ele é do objeto Conta
+        public static int contadorNumero = 1000;
+        
+        //Atributos da pessoa
+        private int id;                 // geração automática
+        private String numero;          // geração automática
+        private Agencia agencia;        // associada a agencia do gerente
+        private Pessoa titular;        // gerente informa
+        
+        
+        
+        private String dataAbertura;    // String 08/09/20 data de abertura do momento LocalDateTime.now();
+        private char classificacao;     // A*, B, C ou D
+        private double saldo=1000d;
+        
+        //CONSTRUTOR
+        
+        //METODOS
+        public abstract void transferencia(int tipoTransf, double valor, Conta destino);
+        //transferencia equivale pix- transferencia-valorA+valorB saque-valor deposito+valor
+        
+        public abstract void imprimeConta();
+        
+        
+        public int getId() {
+            return id;
+        }
+        
+        
+        public void setId() {
+            this.id = (contadorId); contadorId++;
+        }
+        
+        public static int getContadorNumero() {
+            return contadorNumero;
+        }
+        
+        
+        public static void setContadorNumero(int contadorNumero) {
+            Conta.contadorNumero = contadorNumero;
+        }
+        
+        
+        public Pessoa getTitular(){
+            return titular;
+        }
 
-    
-    //Atributos da pessoa
-    private int id; // geração automática
-    private String numero; // geração automática
-    private Agencia agencia; // associada a agencia do gerente
-    private Cliente titular; // gerente informa
-    private String dataAbertura; // data de abertura do momento
-    private char classificacao; // A*, B, C ou D
-    
-    
-    
-    
-    //resolver o problema das especificidades com herança
+        public void setTitular(Pessoa titular) {
+            this.titular = titular;
+        }
+        
+        
+        public String getNumero() {
+            return numero;
+        }
+        
+        
+        public void setNumero(String numero) {
+            this.numero = numero;
+        }
 
-    //todos se tornam private
 
-    // Construtores 
-    public Conta(Cliente cliente, String tipo){ // o (Cliente cliente) pega o this.titular // depois terá o parametro (Agencia agencia) por causa do gerente
-        //esse aqui anula o construtor generico do "Conta conta1 = new Conta()"
-        //aqui os parametros quando cria a nova conta do zero
-
-        this.id = contadorId; contadorId++; // O próximo deve ser 2
-        this.saldo = 0;
-        //this.dataAbertura = "04/09/2024"; //rode um comando que busque a data daquele momento
-        this.numero = (contadorNumero+"-0"); contadorNumero++; // A próxima deve ser 1001-0
-        this.classificacao = 'A';
-        this.status = "Ativa";
-        // As informações que são passadas no momento em que o objeto é instanciado
-        this.titular = cliente;
-        this.tipo = tipo;
-        //this.agencia = agencia;
-
+    public Agencia getAgencia() {
+        return agencia;
     }
 
-    
-//Outros Métodos
 
-    public void exibeDadosDaConta(){
+    public void setAgencia(Agencia agencia) {
+        this.agencia = agencia;
+    }
 
-        
-        System.out.println("---------");
-        System.out.println("DADOS DA CONTA:");
-        System.out.println("Conta: "+this.numero);
-        System.out.println("Titular: "+this.titular.getNome());
-        System.out.println("Seu saldo é: R$"+this.saldo);   
-        System.out.println("Data de abertura: "+this.dataAbertura);
-        System.out.println("Tipo Classificação: "+this.classificacao);
-        System.out.println("Status: "+status);
-        System.out.println("Id: "+this.id);
-        System.out.println("---------\n\n");
+    public String getDataAbertura() {
+        return dataAbertura;
+    }
+
+
+    public void setDataAbertura(String dataAbertura) {
+        this.dataAbertura = dataAbertura;
+    }
+
+
+    public char getClassificacao() {
+        return classificacao;
+    }
+
+
+    public void setClassificacao(char classificacao) {
+        this.classificacao = classificacao;
+    }
+
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

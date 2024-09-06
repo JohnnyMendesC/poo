@@ -10,10 +10,9 @@ public abstract class Funcionario extends Pessoa{
 
     private String login;
     private String senha;
-    public String 
     
     //Getters e Setters
-    getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
     public void setMatricula(String matricula) {

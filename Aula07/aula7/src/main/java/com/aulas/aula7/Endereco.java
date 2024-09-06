@@ -1,6 +1,7 @@
 package com.aulas.aula7;
 
 public class Endereco {
+    //ATRIBUTOS
     public static int contadorid = 8800; 
 
     private int id;
@@ -12,6 +13,7 @@ public class Endereco {
     private String estado;
     private String cep;
     
+    //CONSTRUTOR
     public Endereco(String log, String num, String comp, String bai, String cid, String est, String cep){
         this.id = contadorid; contadorid++;
         this.logradouro = log;
@@ -22,7 +24,8 @@ public class Endereco {
         this.estado = est;
         this.cep = cep;
     }
-
+    
+    //METODO
     public void imprimeEndereco(){
         System.out.println("---------");
         System.out.println("ENDEREÇO:");

@@ -1,6 +1,9 @@
 package com.aulas.aula7;
 
 public abstract class Pessoa {
+    //ATRIBUTOS
+    public static int contadorId = 1;
+    
     //classe abstract serve de modelo para as classes filhas "classefilha extends mãe"
     private int id;
     private String nome;
@@ -9,14 +12,35 @@ public abstract class Pessoa {
     private Endereco endereco;
     private String email;
     private String telefone;
+    private String login;
+    private String senha;
+    
+    //METODOS
+    public abstract void imprimeFicha();
+    
+    
+    //GETTERS E SETTERS
+    public String getLogin() {
+        return login;
+    }
+    public void setLogin(String login) {
+        this.login = login;
+    }
 
-
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha, int id) {        
+        this.login = Geradores.geradorDeLetra();
+        this.senha = Geradores2.gerarSenha();
+        this.senha = senha;
+    }
     //Getters e Setters
     public int getId() {
         return id;
     }
-    public void setId(int id) {
-        this.id = id;
+    public void setId() {
+        this.id = (contadorId); contadorId++;
     }
     public String getNome() {
         return nome;
@@ -54,7 +78,4 @@ public abstract class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }         
-
-    public abstract void imprimeFicha();
-
-    }
+}

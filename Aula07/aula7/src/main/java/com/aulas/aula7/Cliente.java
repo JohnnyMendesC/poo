@@ -1,11 +1,28 @@
 package com.aulas.aula7;
 
 public class Cliente extends Pessoa {
+    //ATRIBUTOS
 
     String login; //boiler plate
     String senha;
     //private char classificacao; // A*, B, C ou D // onde ficaria melhor a classificação?
 
+
+    //CONSTRUTORES
+    public Cliente(){
+        /* 
+        cpf;
+        dataNascimento;
+        endereco;
+        email;
+        telefone;
+        login;
+        senha;*/
+    }
+
+
+
+    //METODOS
     public void imprimeFicha(){
         System.out.println("======================");
         System.out.println("| DADOS  DE  CLIENTE |");
@@ -17,7 +34,47 @@ public class Cliente extends Pessoa {
 		System.out.println("Login: "+getEndereco().getLogradouro());
 		System.out.println("Email: "+getEmail());
 		System.out.println("Telefone: "+getTelefone());
+        
     }
+    //GETTERS SETTERS
+
+    public String nome(){
+        return getNome();
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+
+
+    public String getSenha() {
+        return senha;
+    }
+
+
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 /*
     public static int contadorId = 300;
     

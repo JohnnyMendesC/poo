@@ -1,16 +1,39 @@
 package com.aulas.aula7;
 
-public class CtSalario extends Conta {
-    
-    String tipoID = "S-2000-"+this.getId();
-    double pix;                                 //poupança, salário, corrente
-    double transferencia;                       //poupança, salário, corrente
-    private double saldo;                       // saldo começa igual a 0
+public class CtSalario extends Conta { 
+    //ATRIBUTOS  
+    String tipoID;
     private String status;                      // (ativa), bloqueada, suspensa(30 dias), em analise, inativa
+    
 
+    //CONSTRUTORES
+    public CtSalario(){
+        tipoID = ("S-2000-"+getId());
+    }
+
+    //MÉTODOS
     @Override
     public void imprimeConta(){
+        System.out.println(getSaldo());
     }
+
+    public void transferencia(int tipoTransf, double valor, Conta destino){
+        System.out.println("Conta salário");
+    }
+
+    //GETTER SETTER
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void transferencia(){    
+        System.out.println("Conta não habilitada para realizar transferências.");
+    }
+
 }
 
 
