@@ -70,7 +70,7 @@ public class Aula06Application {
 		System.out.println(Conta.contadorId);*/
 
 		Cliente cliente1 = new Cliente("Nome1", "123", "Jan96", "1@com", "2422");
-		cliente1.setNome("Nome1"); cliente1.setCpf("123"); cliente1.setDataNascimento("Jan96");
+		cliente1.setCpf("123"); cliente1.setDataNascimento("Jan96");
 		cliente1.setEmail("1@com"); cliente1.setTelefone("1141");
 		
 		Cliente cliente2 = new Cliente("Nome2", "456", "Dez96", "2@com", "2423");

@@ -20,10 +20,11 @@ public class Conta {
 
         this.id = 1; // O próximo deve ser 2
         this.saldo = 0;
-        this.dataAbertura = "03/09/2024";
-        this.numero = "1234-0"; // A próxima deve ser 1235-0
+        //this.dataAbertura = "04/09/2024"; //rode um comando que busque a data daquele momento
+        this.numero = "1000-0"; // A próxima deve ser 1001-0
         this.classificacao = 'A';
         this.status = "Ativa";
+        // As informações que são passadas no momento em que o objeto é instanciado
         this.titular = cliente;
         this.tipo = tipo;
         //this.agencia = agencia;

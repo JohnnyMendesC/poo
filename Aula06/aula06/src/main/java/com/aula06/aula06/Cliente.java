@@ -20,6 +20,8 @@ public class Cliente {
         this.id = (contadorId); contadorId++;
         this.login = Geradores.geradorDeLetra();
         this.senha = Geradores2.gerarSenha();
+
+        this.nome = nome;
     }
     public Cliente(){
     this.id = (contadorId); contadorId++;
